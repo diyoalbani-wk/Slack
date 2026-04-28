@@ -8,12 +8,13 @@
         <title>Sl@ck</title>
     </head>
     <body>
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
 
         <header class="bg-white border-b-2 border-black sticky top-0 z-50">
             <nav class="flex h-[55px] items-center justify-between">
                 
                 <div class="flex items-center px-4 md:px-6 border-r-2 border-black h-full shrink-0">
-                    <svg width="128" height="37" viewBox="0 0 128 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                   <svg width="128" height="37" viewBox="0 0 128 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d_303_401)">
                     <path d="M7.84451 22.0067C7.84451 23.961 6.26498 25.5406 4.31065 25.5406C2.35632 25.5406 0.776794 23.961 0.776794 22.0067C0.776794 20.0524 2.35632 18.4728 4.31065 18.4728H7.84451V22.0067ZM9.61144 22.0067C9.61144 20.0524 11.191 18.4728 13.1453 18.4728C15.0996 18.4728 16.6792 20.0524 16.6792 22.0067V30.8413C16.6792 32.7957 15.0996 34.3752 13.1453 34.3752C11.191 34.3752 9.61144 32.7957 9.61144 30.8413V22.0067Z" stroke="black" stroke-width="1.5" shape-rendering="crispEdges"/>
                     </g>
@@ -59,12 +60,34 @@
                         <span class="sm:hidden">Login</span>
                     </div>
 
-                    <div class="lg:hidden px-4 border-l-2 border-black h-full flex items-center cursor-pointer hover:bg-zinc-50">
+                    <label for="menu-toggle" class="lg:hidden px-4 border-l-2 border-black h-full flex items-center cursor-pointer hover:bg-zinc-50">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    </div>
+                    </label>
+                    
                 </div>
             </nav>
         </header>
+
+        <div class="fixed inset-0 bg-black/60 z-[60] hidden peer-checked:flex lg:hidden">
+            <label for="menu-toggle" class="absolute inset-0"></label>
+            <div class="relative bg-white w-[300px] h-full border-r-4 border-black p-8 flex flex-col">
+                <div class="flex justify-between items-center mb-8">
+                    <div class="w-8 h-8">
+                        <img src="images/image.png" alt="">
+                    </div>
+                    <label for="menu-toggle" class="cursor-pointer">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="3"><path d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </label>
+                </div>
+                <nav class="flex flex-col gap-6 text-xl font-black">
+                    <a href="#products">Products</a>
+                    <a href="#solutions">Solutions</a>
+                    <a href="#enterpise">Enterprise</a>
+                    <a href="#resource">Resources</a>
+                    <a href="#pricing">Pricing</a>
+                </nav>
+            </div>
+        </div>
 
         <main class="grid grid-cols-1 md:grid-cols-2">
         
@@ -751,7 +774,7 @@
 
                 <div class="flex flex-col lg:flex-row gap-3 text-4xl justify-center py-4"> 
                     <h1 class="font-semibold ">
-                        Teams <span class="font-extrabold">large</span> and
+                        Teams <span class="font-extrabold">large</span>
                     </h1>
 
                     <h1 class="font-semibold ">
